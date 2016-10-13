@@ -49,7 +49,7 @@ def genData(I, J, mean_demand, mean_cost, mean_capacity, stdev_demand, stdev_cos
 
     for i in range(I):
         for j in range(J):
-            r.append(math.sqrt(math.pow(demand_pos_x[i] - facility_pos_x[j], 2) + math.pow(demand_pos_y[i] + facility_pos_y[j], 2)))
+            r.append(math.sqrt(math.pow(demand_pos_x[i] - facility_pos_x[j], 2) + math.pow(demand_pos_y[i] - facility_pos_y[j], 2)))
 
     r.append("\n")
     res[0] = " ".join([str(x) for x in r])
